@@ -5,7 +5,7 @@ import (
 	"crypto/cipher"
 	"encoding/base64"
 	"fmt"
-	"github.com/dongwq/godemo/util"
+	"github.com/dongwq/go-demo/util"
 )
 
 func AesEncode(key, src []byte) []byte {
@@ -45,9 +45,9 @@ func AesDecode(key, src []byte) []byte {
 }
 
 func AesDecodeStr(key, src string) string {
-	srcBytes,err := base64.StdEncoding.DecodeString(src)
+	srcBytes, err := base64.StdEncoding.DecodeString(src)
 	util.CheckErr("msg err", err)
-	
+
 	result := AesDecode([]byte(key), srcBytes)
 	return string(result)
 }

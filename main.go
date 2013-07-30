@@ -11,9 +11,9 @@ package main
 */
 import (
 	"fmt"
-	 "github.com/dongwq/godemo/demo"
-	"github.com/dongwq/godemo/ref"
-	_ "github.com/dongwq/godemo/util"
+	"github.com/dongwq/go-demo/demo"
+	"github.com/dongwq/go-demo/ref"
+	_ "github.com/dongwq/go-demo/util"
 )
 
 func TestRef3() {
@@ -24,21 +24,19 @@ func TestRef3() {
 
 }
 
-
-
 func main() {
 	//demo.Ref1()
 	//demo.TestRef3()
 	//demo.DemoMysql();
 	//demo.DemoRegexp();
-	demo.DemoPinyin();
+	demo.DemoPinyin()
 
 	//demo.Md5Demo();
 
 	//demo.TimeDemo()
 	//demo.DemoAES()
 	//demo.DemoAESStr()
-	
+
 	//demo.DownImage()
 	//demo.DemoHijack();
 	//util.DemoMail()
