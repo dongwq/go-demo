@@ -1,26 +1,26 @@
 package com.cdp.xauth.dao;
-{{.UserName}}
+
 import java.util.List;
 import java.util.Map;
 
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Repository;
 
-import com.cdp.xauth.model.bo.CPfT005;
-import com.cdp.xauth.model.bo.CPfT005Example;
-import com.cdp.xauth.model.mapper.CPfT005Mapper;
+import com.cdp.xauth.model.bo.{{.ClassName}};
+import com.cdp.xauth.model.bo.{{.ClassName}}Example;
+import com.cdp.xauth.model.mapper.{{.ClassName}}Mapper;
 
 @Repository
-public class CPfT005Dao extends SqlSessionDaoSupport implements CPfT005Mapper {
+public class {{.ClassName}}Dao extends SqlSessionDaoSupport implements {{.ClassName}}Mapper {
 	
-	String namespace = "com.cdp.xauth.model.mapper.CPfT005Mapper.";
+	String namespace = "com.cdp.xauth.model.mapper.{{.ClassName}}Mapper.";
 	@Override
-	public int countByExample(CPfT005Example example) {
-		return this.getSqlSession().getMapper(CPfT005Mapper.class).countByExample(example);
+	public int countByExample({{.ClassName}}Example example) {
+		return this.getSqlSession().getMapper({{.ClassName}}Mapper.class).countByExample(example);
 	}
 
 	@Override
-	public int deleteByExample(CPfT005Example example) {
+	public int deleteByExample({{.ClassName}}Example example) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -32,48 +32,48 @@ public class CPfT005Dao extends SqlSessionDaoSupport implements CPfT005Mapper {
 	}
 
 	@Override
-	public int insert(CPfT005 record) {
-		return this.getSqlSession().getMapper(CPfT005Mapper.class).insert(record);
+	public int insert({{.ClassName}} record) {
+		return this.getSqlSession().getMapper({{.ClassName}}Mapper.class).insert(record);
 	}
 
 	@Override
-	public int insertSelective(CPfT005 record) {
-		return this.getSqlSession().getMapper(CPfT005Mapper.class).insertSelective(record);
+	public int insertSelective({{.ClassName}} record) {
+		return this.getSqlSession().getMapper({{.ClassName}}Mapper.class).insertSelective(record);
 	}
 
 	@Override
-	public List<CPfT005> selectByExample(CPfT005Example example) {
-		return this.getSqlSession().getMapper(CPfT005Mapper.class).selectByExample(example);
+	public List<{{.ClassName}}> selectByExample({{.ClassName}}Example example) {
+		return this.getSqlSession().getMapper({{.ClassName}}Mapper.class).selectByExample(example);
 	}
 
 	@Override
-	public CPfT005 selectByPrimaryKey(Integer userId) {
-		return this.getSqlSession().getMapper(CPfT005Mapper.class).selectByPrimaryKey(userId);
+	public {{.ClassName}} selectByPrimaryKey(Integer userId) {
+		return this.getSqlSession().getMapper({{.ClassName}}Mapper.class).selectByPrimaryKey(userId);
 	}
 
 	@Override
-	public int updateByExampleSelective(CPfT005 record, CPfT005Example example) {
+	public int updateByExampleSelective({{.ClassName}} record, {{.ClassName}}Example example) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int updateByExample(CPfT005 record, CPfT005Example example) {
+	public int updateByExample({{.ClassName}} record, {{.ClassName}}Example example) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int updateByPrimaryKeySelective(CPfT005 record) {
-		return this.getSqlSession().getMapper(CPfT005Mapper.class).updateByPrimaryKeySelective(record);
+	public int updateByPrimaryKeySelective({{.ClassName}} record) {
+		return this.getSqlSession().getMapper({{.ClassName}}Mapper.class).updateByPrimaryKeySelective(record);
 	}
 
 	@Override
-	public int updateByPrimaryKey(CPfT005 record) {
-		return this.getSqlSession().getMapper(CPfT005Mapper.class).updateByPrimaryKey(record);
+	public int updateByPrimaryKey({{.ClassName}} record) {
+		return this.getSqlSession().getMapper({{.ClassName}}Mapper.class).updateByPrimaryKey(record);
 	}
 	
-	public List<Map> selectByExampleForMap(CPfT005Example example) {
+	public List<Map> selectByExampleForMap({{.ClassName}}Example example) {
 		return this.getSqlSession().selectList(namespace+"selectByExampleForMap", example);
 	}
 	

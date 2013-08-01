@@ -8,7 +8,8 @@ import (
 )
 
 type Person struct {
-	UserName string
+	UserName  string
+	ClassName string
 }
 
 func genDao() {
@@ -24,8 +25,14 @@ func genDao() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	p := Person{UserName: "Astaxie"}
-	fmt.Println(t)
+	p := Person{ClassName: "Client"}
+	//fmt.Println(t)
+
+	file, err := os.Create("SomeDao.java")
+	if err != nil {
+		log.Print("err for file")
+	}
+	fmt.Println(file)
 	err = t.Execute(os.Stdout, p)
 
 	log.Fatalln(err)

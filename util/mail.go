@@ -1,8 +1,8 @@
 package util
 
 import (
-	"net/smtp"
 	"fmt"
+	"net/smtp"
 	"strings"
 )
 
@@ -16,18 +16,17 @@ import (
  *  mailtyoe: mail type html or text
  */
 
-
-func SendMail(user, password, host, to, subject, body, mailtype string) error{
+func SendMail(user, password, host, to, subject, body, mailtype string) error {
 	hp := strings.Split(host, ":")
 	auth := smtp.PlainAuth("", user, password, hp[0])
 	var content_type string
 	if mailtype == "html" {
-		content_type = "Content-Type: text/"+ mailtype + "; charset=UTF-8"
-	}else{
+		content_type = "Content-Type: text/" + mailtype + "; charset=UTF-8"
+	} else {
 		content_type = "Content-Type: text/plain" + "; charset=UTF-8"
 	}
 
-	msg := []byte("To: " + to + "\r\nFrom: " + user + "<"+ user +">\r\nSubject: " + subject + "\r\n" + content_type + "\r\n\r\n" + body)
+	msg := []byte("To: " + to + "\r\nFrom: " + user + "<" + user + ">\r\nSubject: " + subject + "\r\n" + content_type + "\r\n\r\n" + body)
 	send_to := strings.Split(to, ";")
 	err := smtp.SendMail(host, auth, user, send_to, msg)
 	return err
@@ -55,7 +54,7 @@ func DemoMail() {
 	if err != nil {
 		fmt.Println("send mail error!")
 		fmt.Println(err)
-	}else{
+	} else {
 		fmt.Println("send mail success!")
 	}
 
