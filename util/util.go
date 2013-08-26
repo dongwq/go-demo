@@ -11,14 +11,14 @@ import "log"
 
 func CheckErr(msg string, err error) error {
 	if err != nil {
-		log.Fatal(msg , err)
+		log.Fatal(msg+" ", err)
 	}
 	return err
 }
 
 func CheckOK(msg string, ok bool) bool {
 	if ok == false {
-		log.Println(msg , ok)
+		log.Println(msg, ok)
 	}
 	return ok
 }
