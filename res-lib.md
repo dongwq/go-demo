@@ -3,9 +3,6 @@ res-lib.md
 "github.com/axgle/pinyin"
 
 
->golang http静态文件服务开启方法：
->http.Handle("/static/", http.FileServer(http.Dir(".")))
-
 # github.com/QLeelulu/goku/examples/todo/todo/controllers
 todo\controllers\todo.go:119: cannot use id (type interface {}) as type int in function argument: ne
 ed type assertion
@@ -14,7 +11,7 @@ go chatting use websocket:
 https://github.com/kobeld/gochatting.git
 
 
-goku
+### goku: a go web framework
 http://qleelulu.github.com/goku/doc/controller--action/
 
 go config like ini
@@ -30,14 +27,17 @@ Here's the recipe I used:
 4. Open http://localhost:3999/
 
 
-
+### go static blog tool
 https://github.com/wendal/gor.git
 
+### go checksum
 "github.com/gosexy/checksum"
 
+### go captcha
 "github.com/dchest/captcha"
 
-
+### go Unit Test
+https://github.com/stretchr/testify
 
 
 
